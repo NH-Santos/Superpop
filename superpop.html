@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário Super Pop</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		/* =========================
+		   SUPER POP – FORMULÁRIO
+		   12cm x 8cm (454px x 302px)
+		   ========================= */
+
+		:root {
+			--font-family: 'Open Sans', Arial, sans-serif;
+
+			/* Fontes */
+			--font-size-header: 16px;
+			--font-size-label: 12px;
+			--font-size-input: 13px;
+
+			/* Cores */
+			--color-background: #fbfcfe;
+			--color-card-bg: #ffffff;
+			--color-card-border: #dbdfe7;
+			--color-header: #525356;
+			--color-label: #555555;
+			--color-input-border: #dbdfe7;
+			--color-input-text: #333;
+			--color-focus-border: #5a4cc2;
+			--color-submit-btn-bg: #ff6d5a;
+			--color-submit-btn-text: #ffffff;
+
+			/* Dimensões reais */
+			--superpop-width: 454px;   /* 12cm */
+			--superpop-height: 302px;  /* 8cm */
+
+			/* Espaçamentos */
+			--padding-card: 16px;
+			--padding-input: 8px;
+
+			/* Bordas */
+			--border-radius-card: 6px;
+			--border-radius-input: 4px;
+
+			/* Botão */
+			--submit-btn-height: 36px;
+		}
+
+		* {
+			box-sizing: border-box;
+			font-family: var(--font-family);
+		}
+
+		body {
+			margin: 0;
+			background: var(--color-background);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		/* =========================
+		   CARTÃO SUPER POP
+		   ========================= */
+
+		.superpop-card {
+			width: var(--superpop-width);
+			height: var(--superpop-height);
+			background: var(--color-card-bg);
+			border: 1px solid var(--color-card-border);
+			border-radius: var(--border-radius-card);
+			padding: var(--padding-card);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			overflow: hidden;
+		}
+
+		/* =========================
+		   CABEÇALHO
+		   ========================= */
+
+		.superpop-header {
+			text-align: center;
+			font-size: var(--font-size-header);
+			font-weight: 600;
+			color: var(--color-header);
+			margin-bottom: 8px;
+		}
+
+		/* =========================
+		   CAMPOS
+		   ========================= */
+
+		.superpop-fields {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 8px;
+			flex-grow: 1;
+		}
+
+		.superpop-field {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.superpop-field label {
+			font-size: var(--font-size-label);
+			color: var(--color-label);
+			margin-bottom: 2px;
+		}
+
+		.superpop-field input,
+		.superpop-field select {
+			height: 34px;
+			padding: 0 8px;
+			font-size: var(--font-size-input);
+			border: 1px solid var(--color-input-border);
+			border-radius: var(--border-radius-input);
+			color: var(--color-input-text);
+			background: #fff;
+		}
+
+		.superpop-field input:focus,
+		.superpop-field select:focus {
+			outline: none;
+			border-color: var(--color-focus-border);
+		}
+
+		/* Campo em largura total */
+		.superpop-field.full {
+			grid-column: span 2;
+		}
+
+		/* =========================
+		   BOTÃO
+		   ========================= */
+
+		.superpop-footer {
+			margin-top: 8px;
+		}
+
+		.superpop-footer button {
+			width: 100%;
+			height: var(--submit-btn-height);
+			background: var(--color-submit-btn-bg);
+			color: var(--color-submit-btn-text);
+			border: none;
+			border-radius: var(--border-radius-input);
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+		}
+
+		.superpop-footer button:active {
+			transform: scale(0.97);
+		}
+	</style>
+</head>
+
+<body>
+
+	<form class="superpop-card">
+		<div class="superpop-header">
+			FORMULÁRIO SUPER POP
+		</div>
+
+		<div class="superpop-fields">
+			<div class="superpop-field">
+				<label>Nome</label>
+				<input type="text" name="nome" required>
+			</div>
+
+			<div class="superpop-field">
+				<label>Setor</label>
+				<input type="text" name="setor" required>
+			</div>
+
+			<div class="superpop-field">
+				<label>Matrícula</label>
+				<input type="text" name="matricula">
+			</div>
+
+			<div class="superpop-field">
+				<label>Data</label>
+				<input type="date" name="data">
+			</div>
+
+			<div class="superpop-field full">
+				<label>Tipo de Avaliação</label>
+				<select name="avaliacao">
+					<option value="">Selecione</option>
+					<option>45 dias</option>
+					<option>90 dias</option>
+					<option>Experiência</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="superpop-footer">
+			<button type="submit">ENVIAR</button>
+		</div>
+	</form>
+
+</body>
+</html>

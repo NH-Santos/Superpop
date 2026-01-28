@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Reconhecimento Superpop</title>
+<title>Superpop</title>
 <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -11,61 +11,83 @@
     }
 
     .card {
-        width: 700px;
+        width: 720px;
         background: #fff;
-        padding: 20px 25px;
+        padding: 25px;
         border: 1px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         margin: auto;
         position: relative;
     }
 
-    .top-right {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        text-align: right;
+    /* Cabeçalho */
+    .header {
         color: #b0302e;
         font-weight: bold;
+        margin-bottom: 30px;
     }
 
-    .top-right small {
+    .header h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+
+    .header p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        color: #b0302e;
+    }
+
+    /* Campos */
+    .field {
+        margin-bottom: 20px;
+    }
+
+    .field label {
         display: block;
-        font-size: 12px;
-        color: #cc6b3d;
-        font-weight: normal;
-    }
-
-    .section {
-        margin-bottom: 15px;
-    }
-
-    .line {
-        border-bottom: 1px solid #000;
-        height: 18px;
+        font-weight: bold;
         margin-bottom: 5px;
     }
 
-    .label {
+    .field input[type="text"] {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 16px;
+        padding: 5px 0;
+        outline: none;
+    }
+
+    /* Texto central */
+    .center-text {
+        text-align: center;
         font-weight: bold;
-        margin-right: 10px;
+        margin: 30px 0 20px;
+        font-size: 18px;
     }
 
+    /* Checkboxes lado a lado */
     .checkboxes {
-        margin: 20px 0;
-    }
-
-    .checkboxes label {
-        display: block;
-        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 30px;
         font-size: 16px;
     }
 
+    /* Observações */
+    .lines div {
+        border-bottom: 1px solid #000;
+        height: 20px;
+        margin-bottom: 6px;
+    }
+
+    /* Rodapé */
     .footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .date {
@@ -73,15 +95,17 @@
     }
 
     .logo {
+        text-align: right;
         font-weight: bold;
         color: #b0302e;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .logo small {
         display: block;
-        font-size: 11px;
-        color: #cc6b3d;
+        font-size: 13px;
+        color: #b0302e;
+        font-weight: normal;
     }
 </style>
 </head>
@@ -89,41 +113,35 @@
 
 <div class="card">
 
-    <div class="top-right">
-        Superpop
-        <small>Valorizando pessoas, construindo histórias.</small>
+    <div class="header">
+        <h1>Superpop</h1>
+        <p>Valorizando pessoas, construindo histórias.</p>
     </div>
 
-    <div class="section">
-        <span class="label">Colaborador:</span>
-        <div class="line"></div>
+    <div class="field">
+        <label>Colaborador:</label>
+        <input type="text">
     </div>
 
-    <div class="section">
-        <span class="label">Reconhecido por:</span>
-        <div class="line"></div>
+    <div class="field">
+        <label>Reconhecido por:</label>
+        <input type="text">
+    </div>
+
+    <div class="center-text">
+        Eu reconheço você pela prática do(s) valor(es) da empresa:
     </div>
 
     <div class="checkboxes">
-        <strong>Eu reconheço você pela prática do(s) valor(es) da empresa:</strong><br><br>
-
-        <label>
-            <input type="checkbox"> Honestidade
-        </label>
-
-        <label>
-            <input type="checkbox"> Respeito
-        </label>
-
-        <label>
-            <input type="checkbox"> Compromisso
-        </label>
+        <label><input type="checkbox"> Honestidade</label>
+        <label><input type="checkbox"> Respeito</label>
+        <label><input type="checkbox"> Compromisso</label>
     </div>
 
-    <div class="section">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+    <div class="lines">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 
     <div class="footer">
@@ -133,7 +151,7 @@
 
         <div class="logo">
             Popular
-            <small>O que é bom dura mais</small>
+            <small>É o que todo mundo gosta!!</small>
         </div>
     </div>
 

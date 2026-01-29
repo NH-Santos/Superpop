@@ -12,7 +12,7 @@
             padding: 20px;
          }
 
-         card {
+          card {
             width:920px;
             background: #fff;
             padding: 25px;
@@ -23,20 +23,19 @@
 
          /*Cabeçalho*/
          .header {
-            color: darkred;
-            font-weight: bold;
-            margin-bottom: 30px;
-            text-align: center;
+           width: 100%;
+           display: flex;
+           margin-bottom: 30px;
          }
 
-         .header h1 {
-            margin: 0;
-            font-size: 50px;
+         .header img {
+            width: 450px;
+            height: auto;
          }
 
          .header p {
             margin: 5px 0 0;
-            font-size: 20px;
+            font-size: 40px;
             color:#a30d0a;
          }
 
@@ -45,10 +44,12 @@
             display: flex;
             align-items: center;
             margin-bottom: 5px;
+            font-size: 25px;
          }
+
          .inline-field label {
             font-weight: bold;
-            margin-right: 8px;
+            margin-right: 5px;
             white-space: nowrap;
          }
 
@@ -56,9 +57,9 @@
             flex: 0;
             border:none;
             background-color:transparent;
-            border-bottom: 2px solid rgb(59, 57, 57);
+            border-bottom: 2px solid rgb(46, 46, 46);
             font-size: 16px;
-            padding: 4px 0;
+            padding: 2px 0;
             outline: none;
          }
 
@@ -68,7 +69,7 @@
             font-weight: bold;
             margin: 20px 0 5px;
             font-size: 25px;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
          }
 
          /*Checkbox*/
@@ -78,7 +79,7 @@
             justify-content: center;
             gap: 55px;
             margin-bottom: 20px;
-            font-size: 16px;
+            font-size: 20px;
          }
 
          /*Observações*/
@@ -111,6 +112,13 @@
             width: 200px;
             height: auto;
          }
+
+         @media (max-width: 768px) {
+            .header {
+               flex-direction: column;
+               gap: 10px;
+            }
+         }
         </style>
     </head>
 
@@ -118,8 +126,7 @@
       <div class="card">
 
         <div class="header">
-            <h1>Superpop</h1>
-            <p>Valorizando pessoas, construindo histórias.</p>
+            <img src="SuperPop2.png" alt="Logo_popularcomleo">
         </div>
 
         <div class="inline-field">

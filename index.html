@@ -141,7 +141,7 @@
             cursor: pointer;
          
             transition:
-               transform 0,25s ease,
+               transform 0.25s ease,
                box-shadow 0.25s ease,
                background-color 0.25s ease;
          }
@@ -178,49 +178,8 @@
         </style>
     </head>
 
-    <script>
-      document
-        .getElementById("formsuperpop")
-        .addEventListener("submit", async (e) => {
-         e.preventDefault();
-
-          const formData = new FormData(e.target);
-
-          const valores = formData.getAll("valores[]");
-
-          const dados = {
-            colaborador: formData.get("colaborador"),
-            reconhecido_por: formData.get("reconhecido_por"),
-            valores,
-            observacoes: formData.get("observacoes"),
-
-            // opcional: vindo da URL
-            telefone_criador: new URLSearchParams(window.location.search).get("from"),
-            telefone_destino: new URLSearchParams(window.location.search).get("to")
-          };
-
-          try {
-            const response = await fetch(
-              "http://31.220.93.14:5678/webhook/mensagem",
-              {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(dados)
-             }
-            );
-
-            if (!response.ok) throw new Error();
-
-            alert("Reconhecimento enviado com sucesso!");
-          } catch (err) {
-            alert("Erro ao enviar. Tente novamente.");
-          }
-      });
-   </script>
-
-
     <body>
-      <form id="formsuperpop">
+      <form id="formsuperpop" class="card">
       
         <div class="header">
             <img src="SuperPop2.png" alt="Logo_popularcomleo">
@@ -259,8 +218,6 @@
 
          <textarea name="observações" placeholder=""></textarea>
 
-      </div>
-
       <div class="enviar-container">
          <input type="submit" value="Enviar" class="btn-enviar">
       </div>
@@ -272,5 +229,44 @@
         </div>
    </form>
 
+       <script>
+      document
+        .getElementById("formsuperpop")
+        .addEventListener("submit", async (e) => {
+         e.preventDefault();
+
+          const formData = new FormData(e.target);
+
+          const valores = formData.getAll("valores[]");
+
+          const dados = {
+            colaborador: formData.get("colaborador"),
+            reconhecido_por: formData.get("reconhecido_por"),
+            valores,
+            observacoes: formData.get("observacoes"),
+
+            // opcional: vindo da URL
+            telefone_criador: new URLSearchParams(window.location.search).get("from"),
+            telefone_destino: new URLSearchParams(window.location.search).get("to")
+          };
+
+          try {
+            const response = await fetch(
+              "http://31.220.93.14:5678/webhook/mensagem",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(dados)
+             }
+            );
+
+            if (!response.ok) throw new Error();
+
+            alert("Reconhecimento enviado com sucesso!");
+          } catch (err) {
+            alert("Erro ao enviar. Tente novamente.");
+          }
+       });
+      </script>
     </body>
 </html>

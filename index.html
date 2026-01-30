@@ -89,7 +89,7 @@
             justify-content: center;
             gap: 55px;
             margin-bottom: 20px;
-            font-size:16px;
+            font-size:20px;
          }
 
          /*Observações*/
@@ -129,16 +129,26 @@
             height: 80px;
             background-color: #be100e;
             color: white;
-            font-size: 26px;
+            font-size: 46px;
+            font-family: 'Cactus', sans-serif;
             font-weight: bold;
             border: none;
             border-radius: 12px;
             cursor: pointer;
-
+         
+            transition:
+               transform 0,25s ease,
+               box-shadow 0.25s ease,
+               background-color 0.25s ease;
          }
 
          .btn-enviar:hover {
             background-color: #920303;
+         }
+
+         .btn-enviar:active {
+            transform: scale(0.97);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
          }
 
          .logo {
@@ -190,10 +200,11 @@
             <label><input type="checkbox">Honestidade</label>
             <label><input type="checkbox">Respeito</label>
             <label><input type="checkbox">Compromisso</label>
-        </div>
-    </div>      
+        </div>     
 
-    <textarea placeholder=""></textarea>
+         <textarea placeholder=""></textarea>
+
+      </div>
 
       <form action="/enviar" method="post" class="enviar-container">
          <input type="submit" value="Enviar" class="btn-enviar">

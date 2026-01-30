@@ -46,6 +46,7 @@
             margin: 5px 0 0;
             font-size: 40px;
             color:#a30d0a;
+            margin-bottom: 20px;
          }
 
          /*Campos centrais*/
@@ -117,6 +118,29 @@
             outline: none;
          }
 
+         .enviar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+         }
+
+         .btn-enviar {
+            width: 280px;
+            height: 80px;
+            background-color: #be100e;
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+
+         }
+
+         .btn-enviar:hover {
+            background-color: #920303;
+         }
+
          .logo {
             display: block;
             align-items: center;
@@ -171,6 +195,10 @@
 
     <textarea placeholder=""></textarea>
 
+      <form action="/enviar" method="post" class="enviar-container">
+         <input type="submit" value="Enviar" class="btn-enviar">
+      </form>
+         
     <div class="footer">
 
         <div class="logo">

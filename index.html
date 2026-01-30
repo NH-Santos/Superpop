@@ -121,6 +121,7 @@
             outline: none;
          }
 
+         /*Botão Enviar*/
          .enviar-container {
             display: flex;
             justify-content: center;
@@ -154,6 +155,7 @@
             box-shadow: 0 5px 10px rgba(0,0,0,0.2);
          }
 
+         /*Logo popular*/
          .logo {
             display: block;
             align-items: center;
@@ -199,7 +201,7 @@
 
           try {
             const response = await fetch(
-              "https://SEU_N8N/webhook/reconhecimento",
+              "http://31.220.93.14/webhook/mensagem",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -259,9 +261,9 @@
 
       </div>
 
-      <form action="/enviar" method="post" class="enviar-container">
+      <div class="enviar-container">
          <input type="submit" value="Enviar" class="btn-enviar">
-      </form>
+      </div>
          
     <div class="footer">
 

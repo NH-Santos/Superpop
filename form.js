@@ -13,7 +13,7 @@ document
     };
 
     try {
-      const response = await fetch("absorbable-karleen-pseudolobar.ngrok-free.dev/enviar", {
+      const response = await fetch("absorbable-karleen-pseudolobar.ngrok-free.dev", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados)

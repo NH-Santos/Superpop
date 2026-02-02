@@ -13,7 +13,7 @@ document
     };
 
     try {
-      const response = await fetch("http://localhost:3000/superpop", {
+      const response = await fetch("http://localhost:3000/enviar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados)

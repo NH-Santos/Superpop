@@ -13,7 +13,7 @@ document
     };
 
     try {
-      const response = await fetch("http://31.220.93.14:3000/enviar", {
+      const response = await fetch("absorbable-karleen-pseudolobar.ngrok-free.dev/enviar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados)
